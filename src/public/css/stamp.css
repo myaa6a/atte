@@ -1,0 +1,30 @@
+.stamp__message{
+    font-size: 18px;
+    text-align: center;
+}
+
+.stamp__content {
+    margin: 33px auto;
+    width: 80%;
+}
+
+.form__group--top, .form__group--bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.form__button-submit, .form__button-submit--disabled {
+    border: none;
+    background-color: #fff;
+    margin: 25px;
+    padding: 80px 200px;
+    font-size: 24px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form__button-submit {
+    cursor: pointer;
+}
+
+

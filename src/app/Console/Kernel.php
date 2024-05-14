@@ -2,6 +2,13 @@
 
 namespace App\Console;
 
+use App\Models\User;
+use App\Models\Stamp;
+use App\Models\Rest;
+use Auth;
+use Carbon\Carbon;
+use App\Jobs\SwitchNextDayAttendanceJob;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
@@ -15,7 +22,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->job(new SwitchNextDayAttendanceJob)->dailyAt('19:00');
     }
 
     /**

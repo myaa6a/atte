@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\StampController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('auth', 'verified', 'web')->group(function () {
+    // Route::get('/home', [StampController::class, 'home']);
+    Route::get('/', [StampController::class, 'index']);
+    Route::post('/timein', [StampController::class, 'timein']);
+    Route::post('/restin', [StampController::class, 'restin']);
+    Route::post('/restout', [StampController::class, 'restout']);
+    Route::post('/timeout', [StampController::class, 'timeout']);
+    Route::post('/switch', [StampController::class, 'switch']);
+    Route::get('/attendance', [StampController::class, 'attendance']);
+    Route::get('/day_search', [StampController::class, 'daysearch']);
+    Route::get('/user', [StampController::class, 'user']);
+    Route::get('/user_search', [StampController::class, 'usersearch']);
 });

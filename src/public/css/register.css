@@ -1,0 +1,54 @@
+.register__content {
+    margin: 35px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.content__heading {
+    margin-top: 40px;
+}
+
+.form__group {
+    margin-bottom: 30px;
+}
+
+input {
+    width: 370px;
+    padding: 13px;
+    font-size: 16px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-color: #f6f5f5;
+}
+
+.form__error__container {
+    width: 370px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form__error {
+    color: red;
+}
+
+button {
+    width: 400px;
+    padding: 13px;
+    font-size: 16px;
+    background-color: rgb(45, 88, 229);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.login__link p {
+    font-size: 16px;
+    margin: 0 auto;
+    color: grey;
+}
+
+.login__link__button {
+    text-decoration: none;
+    color: rgb(45, 88, 229);
+}
