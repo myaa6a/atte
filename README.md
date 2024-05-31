@@ -8,6 +8,7 @@
 
 ## アプリケーション URL
 
+- 本番環境：http://mnakagawa.com/
 - 開発環境：http://localhost/
 - phpMyAdmin:http://localhost:8080/
 
@@ -92,5 +93,3 @@ php artisan migrate
 ```bash
 php artisan db:seed
 ```
-
-## 他に記載することがあれば記述する

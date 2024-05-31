@@ -31,7 +31,13 @@
             </tr>
             @foreach($stamps as $stamp)
             <tr class="attendance__row">
-                <td class="attendance__data">{{$stamp->user->name}}</td>
+                <td class="attendance__data">
+                    <form class="user-attendance-search__form" action="/user_search" method="get">
+                    @csrf
+                        <input class="user-attendance-search__input" type="hidden" name="id" value="{{$stamp->user->id}}">
+                        <input class="user-attendance-search__btn" type="submit" value="{{$stamp->user->name}}">
+                    </form>
+                </td>
                 <td class="attendance__data">{{$stamp->work_start_at}}</td>
                 <td class="attendance__data">{{$stamp->work_end_at}}</td>
                 @if(!empty($stamp->rest->rest_time))

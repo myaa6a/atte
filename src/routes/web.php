@@ -17,7 +17,6 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('auth', 'verified', 'web')->group(function () {
-    // Route::get('/home', [StampController::class, 'home']);
     Route::get('/', [StampController::class, 'index']);
     Route::post('/timein', [StampController::class, 'timein']);
     Route::post('/restin', [StampController::class, 'restin']);
