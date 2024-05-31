@@ -8,11 +8,7 @@
 
 ## アプリケーション URL
 
-- 本番環境：http://mnakagawa.com/
-- 開発環境：http://localhost/
-- phpMyAdmin:http://localhost:8080/
-
-## 他のリポジトリ
+- http://mnakagawa.com/
 
 ## 機能一覧
 
